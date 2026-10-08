@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Shelly ❤️</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    }
+
+    body{
+        margin:0;
+            min-height:100vh;
+                font-family:Arial,sans-serif;
+                    background:linear-gradient(135deg,#12000b,#4b001c,#12000b);
+                        color:white;
+                            overflow:hidden;
+                            }
+
+                            .screen{
+                                min-height:100vh;
+                                    display:flex;
+                                        justify-content:center;
+                                            align-items:center;
+                                                text-align:center;
+                                                    padding:25px;
+                                                    }
+
+                                                    .card{
+                                                        width:92%;
+                                                            max-width:500px;
+                                                                padding:35px 25px;
+                                                                    border-radius:28px;
+                                                                        background:rgba(255,255,255,.08);
+                                                                            border:1px solid rgba(255,255,255,.15);
+                                                                                backdrop-filter:blur(12px);
+                                                                                    box-shadow:0 20px 60px rgba(0,0,0,.5);
+                                                                                    }
+
+                                                                                    .hidden{
+                                                                                        display:none!important;
+                                                                                        }
+
+                                                                                        h1{
+                                                                                            font-size:38px;
+                                                                                                margin:15px 0;
+                                                                                                }
+
+                                                                                                h2{
+                                                                                                    font-size:28px;
+                                                                                                    }
+
+                                                                                                    p{
+                                                                                                        font-size:18px;
+                                                                                                            line-height:1.6;
+                                                                                                                color:#ffd9e5;
+                                                                                                                }
+
+                                                                                                                .heart{
+                                                                                                                    font-size:75px;
+                                                                                                                        animation:heartbeat 1.2s infinite;
+                                                                                                                        }
+
+                                                                                                                        button{
+                                                                                                                            border:0;
+                                                                                                                                border-radius:30px;
+                                                                                                                                    padding:15px 28px;
+                                                                                                                                        margin-top:20px;
+                                                                                                                                            font-size:17px;
+                                                                                                                                                font-weight:bold;
+                                                                                                                                                    cursor:pointer;
+                                                                                                                                                        background:#ff3b78;
+                                                                                                                                                            color:white;
+                                                                                                                                                                box-shadow:0 8px 25px rgba(255,59,120,.35);
+                                                                                                                                                                }
+
+                                                                                                                                                                button:active{
+                                                                                                                                                                    transform:scale(.95);
+                                                                                                                                                                    }
+
+                                                                                                                                                                    .fade{
+                                                                                                                                                                        animation:fadeIn 1s ease;
+                                                                                                                                                                        }
+
+                                                                                                                                                                        @keyframes heartbeat{
+                                                                                                                                                                            0%,100%{transform:scale(1)}
+                                                                                                                                                                                50%{transform:scale(1.18)}
+                                                                                                                                                                                }
+
+                                                                                                                                                                                @keyframes fadeIn{
+                                                                                                                                                                                    from{opacity:0;transform:translateY(20px)}
+                                                                                                                                                                                        to{opacity:1;transform:translateY(0)}
+                                                                                                                                                                                        }
+
+                                                                                                                                                                                        .heart-float{
+                                                                                                                                                                                            position:fixed;
+                                                                                                                                                                                                bottom:-40px;
+                                                                                                                                                                                                    font-size:25px;
+                                                                                                                                                                                                        pointer-events:none;
+                                                                                                                                                                                                            animation:floatUp 5s linear forwards;
+                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                            @keyframes floatUp{
+                                                                                                                                                                                                                to{
+                                                                                                                                                                                                                        transform:translateY(-110vh) rotate(360deg);
+                                                                                                                                                                                                                                opacity:0;
+                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                    .firework{
+                                                                                                                                                                                                                                        position:fixed;
+                                                                                                                                                                                                                                            font-size:30px;
+                                                                                                                                                                                                                                                animation:boom 1.5s ease-out forwards;
+                                                                                                                                                                                                                                                    pointer-events:none;
+                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                    @keyframes boom{
+                                                                                                                                                                                                                                                        0%{transform:scale(.2);opacity:1}
+                                                                                                                                                                                                                                                            100%{transform:scale(3);opacity:0}
+                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                            .signature{
+                                                                                                                                                                                                                                                                margin-top:25px;
+                                                                                                                                                                                                                                                                    font-size:20px;
+                                                                                                                                                                                                                                                                        color:#ff9fbd;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        </style>
+                                                                                                                                                                                                                                                                        </head>
+
+                                                                                                                                                                                                                                                                        <body>
+
+                                                                                                                                                                                                                                                                        <!-- SCREEN 1 -->
+
+                                                                                                                                                                                                                                                                        <div class="screen" id="screen1">
+
+                                                                                                                                                                                                                                                                        <div class="card fade">
+
+                                                                                                                                                                                                                                                                        <div class="heart">❤️</div>
+
+                                                                                                                                                                                                                                                                        <h1>Hey Shelly...</h1>
+
+                                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                                        I made something for you.
+                                                                                                                                                                                                                                                                        <br>
+                                                                                                                                                                                                                                                                        But first...
+                                                                                                                                                                                                                                                                        <br><br>
+                                                                                                                                                                                                                                                                        promise me you'll open it till the end. 👀
+                                                                                                                                                                                                                                                                        </p>
+
+                                                                                                                                                                                                                                                                        <button onclick="nextScreen(1)">
+                                                                                                                                                                                                                                                                        Open Your Surprise 💌
+                                                                                                                                                                                                                                                                        </button>
+
+                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                        </div>
+
+
+                                                                                                                                                                                                                                                                        <!-- SCREEN 2 -->
+
+                                                                                                                                                                                                                                                                        <div class="screen hidden" id="screen2">
+
+                                                                                                                                                                                                                                                                        <div class="card fade">
+
+                                                                                                                                                                                                                                                                        <h2>There is something I want you to know...</h2>
+
+                                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                                        Life has given me many beautiful moments,
+                                                                                                                                                                                                                                                                        but having you beside me is one of my favourites.
+                                                                                                                                                                                                                                                                        </p>
+
+                                                                                                                                                                                                                                                                        <button onclick="nextScreen(2)">
+                                                                                                                                                                                                                                                                        Continue ❤️
+                                                                                                                                                                                                                                                                        </button>
+
+                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                        </div>
+
+
+                                                                                                                                                                                                                                                                        <!-- SCREEN 3 -->
+
+                                                                                                                                                                                                                                                                        <div class="screen hidden" id="screen3">
+
+                                                                                                                                                                                                                                                                        <div class="card fade">
+
+                                                                                                                                                                                                                                                                        <div style="font-size:65px">💗</div>
+
+                                                                                                                                                                                                                                                                        <h2>My favourite person...</h2>
+
+                                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                                        You are not just someone I love.
+                                                                                                                                                                                                                                                                        <br><br>
+
+                                                                                                                                                                                                                                                                        You are the person I want to laugh with,
+                                                                                                                                                                                                                                                                        fight with, annoy,
+                                                                                                                                                                                                                                                                        make memories with
+                                                                                                                                                                                                                                                                        and grow old with.
+                                                                                                                                                                                                                                                                        </p>
+
+                                                                                                                                                                                                                                                                        <button onclick="nextScreen(3)">
+                                                                                                                                                                                                                                                                        One More Thing...
+                                                                                                                                                                                                                                                                        </button>
+
+                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                        </div>
+
+
+                                                                                                                                                                                                                                                                        <!-- SCREEN 4 -->
+
+                                                                                                                                                                                                                                                                        <div class="screen hidden" id="screen4">
+
+                                                                                                                                                                                                                                                                        <div class="card fade">
+
+                                                                                                                                                                                                                                                                        <div style="font-size:70px">🥹❤️</div>
+
+                                                                                                                                                                                                                                                                        <h2>Shelly...</h2>
+
+                                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                                        If I had to choose again,
+                                                                                                                                                                                                                                                                        in every lifetime,
+                                                                                                                                                                                                                                                                        in every version of my life...
+                                                                                                                                                                                                                                                                        </p>
+
+                                                                                                                                                                                                                                                                        <h2>
+                                                                                                                                                                                                                                                                        I'd still choose YOU.
+                                                                                                                                                                                                                                                                        </h2>
+
+                                                                                                                                                                                                                                                                        <button onclick="celebrate()">
+                                                                                                                                                                                                                                                                        The Final Surprise ✨
+                                                                                                                                                                                                                                                                        </button>
+
+                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                        </div>
+
+
+                                                                                                                                                                                                                                                                        <!-- FINAL -->
+
+                                                                                                                                                                                                                                                                        <div class="screen hidden" id="final">
+
+                                                                                                                                                                                                                                                                        <div class="card fade">
+
+                                                                                                                                                                                                                                                                        <div style="font-size:75px">
+                                                                                                                                                                                                                                                                        🎉❤️🎂
+                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                        <h1>
+                                                                                                                                                                                                                                                                        I Love You, Shelly ❤️
+                                                                                                                                                                                                                                                                        </h1>
+
+                                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                                        You are my favourite chapter,
+                                                                                                                                                                                                                                                                        my safest place,
+                                                                                                                                                                                                                                                                        and my forever person.
+                                                                                                                                                                                                                                                                        </p>
+
+                                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                                        Here's to us...
+                                                                                                                                                                                                                                                                        <br>
+                                                                                                                                                                                                                                                                        and all the memories we haven't made yet. 🥂
+                                                                                                                                                                                                                                                                        </p>
+
+                                                                                                                                                                                                                                                                        <div class="signature">
+                                                                                                                                                                                                                                                                        Forever yours ❤️
+                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                        </div>
+
+
+                                                                                                                                                                                                                                                                        <script>
+
+                                                                                                                                                                                                                                                                        function nextScreen(number){
+
+                                                                                                                                                                                                                                                                            document.getElementById("screen"+number)
+                                                                                                                                                                                                                                                                                .classList.add("hidden");
+
+                                                                                                                                                                                                                                                                                    document.getElementById("screen"+(number+1))
+                                                                                                                                                                                                                                                                                        .classList.remove("hidden");
+
+                                                                                                                                                                                                                                                                                            createHearts(8);
+                                                                                                                                                                                                                                                                                            }
+
+
+                                                                                                                                                                                                                                                                                            function celebrate(){
+
+                                                                                                                                                                                                                                                                                                document.getElementById("screen4")
+                                                                                                                                                                                                                                                                                                    .classList.add("hidden");
+
+                                                                                                                                                                                                                                                                                                        document.getElementById("final")
+                                                                                                                                                                                                                                                                                                            .classList.remove("hidden");
+
+                                                                                                                                                                                                                                                                                                                createHearts(40);
+                                                                                                                                                                                                                                                                                                                    createFireworks(25);
+                                                                                                                                                                                                                                                                                                                    }
+
+
+                                                                                                                                                                                                                                                                                                                    function createHearts(amount){
+
+                                                                                                                                                                                                                                                                                                                        for(let i=0;i<amount;i++){
+
+                                                                                                                                                                                                                                                                                                                                setTimeout(()=>{
+
+                                                                                                                                                                                                                                                                                                                                            const heart=document.createElement("div");
+
+                                                                                                                                                                                                                                                                                                                                                        heart.className="heart-float";
+
+                                                                                                                                                                                                                                                                                                                                                                    const emojis=[
+                                                                                                                                                                                                                                                                                                                                                                                    "❤️","💕","💗","💖","💘","💝"
+                                                                                                                                                                                                                                                                                                                                                                                                ];
+
+                                                                                                                                                                                                                                                                                                                                                                                                            heart.innerHTML=
+                                                                                                                                                                                                                                                                                                                                                                                                                            emojis[Math.floor(Math.random()*emojis.length)];
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                        heart.style.left=
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        Math.random()*100+"vw";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    heart.style.animationDuration=
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    (3+Math.random()*3)+"s";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                document.body.appendChild(heart);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            setTimeout(()=>{
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            heart.remove();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        },6000);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                },i*80);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    function createFireworks(amount){
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        for(let i=0;i<amount;i++){
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                setTimeout(()=>{
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            const firework=
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            document.createElement("div");
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        firework.className="firework";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    firework.innerHTML=
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ["🎆","✨","💥","🎉","❤️"]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [Math.floor(Math.random()*5)];
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                firework.style.left=
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                (10+Math.random()*80)+"vw";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            firework.style.top=
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            (10+Math.random()*70)+"vh";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        document.body.appendChild(firework);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    setTimeout(()=>{
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    firework.remove();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                },1500);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        },i*120);
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </script>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </html>
